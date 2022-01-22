@@ -1,0 +1,1 @@
+echo "+" && ls -l --color --group-directories-first | awk '{if ($9) {for(i=8;i<=NF;++i) if(i==8) printf "| "; else printf "%s ", $i; print ""}}' && echo "+" && ls -ld .?* --color --group-directories-first | awk -v j=0 '{if($9 && NR>1) {++j; for(i=8;i<=NF;++i) if(i==8) printf "| "; else printf "%s ", $i; print ""}} END{if(j==0) exit 1}' && echo "+"
