@@ -2,7 +2,7 @@ filetype plugin indent on
 
 syntax enable
 
-set nocompatible 
+set nocompatible
 set number
 set tabstop=2
 set shiftwidth=2
@@ -14,6 +14,7 @@ set showtabline=0
 set wrap linebreak nolist
 set cursorline
 set guifont=Fira\ Code\ Light\ Nerd\ Font\ Complete:h16
+set timeoutlen=0
 
 call plug#begin('~/.vim/bundle')
 
