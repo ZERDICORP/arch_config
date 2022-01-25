@@ -26,18 +26,16 @@ set $resize_step 5
 # appearance #
 ##############
 
+# border colors         border  backgr. text    indicator child_border
+client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
+client.focused_inactive #000000 #000000 #ffffff #000000   #000000
+client.unfocused        #000000 #000000 #888888 #000000   #000000
+
 # font, obviously
 font pango:Hack Nerd Font 10
 
-# set border size for all windows
-for_window [class="^.*"] border pixel 2
-
-# gaps between windows
-gaps inner 8
-gaps outer 4
-
-# no gaps when you have 1 window in the workspace (floating are not count)
-smart_gaps on
+# set window border
+for_window [class="^.*"] border pixel 4
 
 # bar
 bar {
@@ -55,19 +53,12 @@ bar {
 ####################
 
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
-# transparency
-exec --no-startup-id picom
-
-# wallpapers
-exec --no-startup-id nitrogen --restore
 
 # apply urxvt config
-exec xrdb -merge ~/.Xresources
+exec --no-startup-id xrdb -merge ~/.Xresources
 
 # start program to toggle language with alt+shift
-exec_always "setxkbmap -model pc104 -layout us,ru -variant ,, -option grp:alt_shift_toggle"
+exec_always --no-startup-id "setxkbmap -model pc104 -layout us,ru -variant ,, -option grp:alt_shift_toggle"
 
 
 
@@ -85,6 +76,9 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
+
+# start a terminal in the same directory
+bindsym $mod+Shift+Return exec urxvt -cd "`xcwd`"
 
 # tiling windows layout
 bindsym $mod+e layout default

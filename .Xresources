@@ -1,48 +1,61 @@
-! apply cfg:
-!  xrdb .Xresources
+!!!!!!!!!!!!!!
+! appearance !
+!!!!!!!!!!!!!!
 
-URxvt.depth: 32
-URxvt.background: [100]#000000
+*background: #111a1f
+*foreground: #eff0eb
+*cursorColor: #9aedfe
 
-URxvt.font: xft:Hack Nerd Font Mono:size=8
-URxvt.internalBorder: 10
-URxvt.letterSpace: 0
-URxvt.antialias: true
+*color0: #33303b
+*color8: #4f4b58
+*color1: #ff5c57
+*color9: #ff5c57
+*color2: #5af78e
+*color10: #5af78e
+*color3: #f3f99d
+*color11: #f3f99d
+*color4: #57c7ff
+*color12: #57c7ff
+*color5: #ff6ac1
+*color13: #ff6ac1
+*color6: #9aedfe
+*color14: #9aedfe
+*color7: #eff0eb
+*color15: #eff0eb
 
-! need: sudo pacman -S urxvt-perls
+*scrollBar: false
+
+*font: xft:Hack Nerd Font Mono:size=8
+*internalBorder: 10
+*letterSpace: 0
+*antialias: true
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! perl plugins (sudo pacman -S urxvt-perls) !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 URxvt.perl-ext-common: default,clipboard,keyboard-select
+
+
+
+!!!!!!!!!!!!!!!
+! keybindings !
+!!!!!!!!!!!!!!!
+
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 
-URxvt.scrollBar: false
-
-URxvt.iso14755:        false
-URxvt.iso14755_52:     false
-
-URxvt.clipboard.autocopy: true
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 
-!!!!!!!!!
-! THEME !
-!!!!!!!!!
 
-*background:   [97]#282a36
-*foreground:   #eff0eb
-*cursorColor:  #9aedfe
 
-*color0:      #33303b
-*color8:      #4f4b58
-*color1:      #ff5c57
-*color9:      #ff5c57
-*color2:      #5af78e
-*color10:     #5af78e
-*color3:      #f3f99d
-*color11:     #f3f99d
-*color4:      #57c7ff
-*color12:     #57c7ff
-*color5:      #ff6ac1
-*color13:     #ff6ac1
-*color6:      #9aedfe
-*color14:     #9aedfe
-*color7:      #eff0eb
-*color15:     #eff0eb
+!!!!!!!!!!!!!!!!!!
+! other settings !
+!!!!!!!!!!!!!!!!!!
+
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+URxvt.clipboard.autocopy: true
