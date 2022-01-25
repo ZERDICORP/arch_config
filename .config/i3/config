@@ -52,8 +52,6 @@ bar {
 # startup programs #
 ####################
 
-exec --no-startup-id dex --autostart --environment i3
-
 # apply urxvt config
 exec --no-startup-id xrdb -merge ~/.Xresources
 
@@ -65,6 +63,9 @@ exec_always --no-startup-id "setxkbmap -model pc104 -layout us,ru -variant ,, -o
 ################
 # key bindings #
 ################
+
+# take screenshot "Pictures" folder (convert util from imagemagick)
+bindsym Print exec xwd -root | convert xwd:- ~/Pictures/screen-"$(date +%s)".png
 
 # volume (up, down)
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
