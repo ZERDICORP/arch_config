@@ -61,8 +61,13 @@ exec_always --no-startup-id "setxkbmap -model pc104 -layout us,ru -variant ,, -o
 # key bindings #
 ################
 
-# take screenshot "Pictures" folder (convert util from imagemagick)
-bindsym Print exec xwd -root | convert xwd:- ~/Pictures/screen-"$(date +%s)".png
+# take screenshot to ~/Pictures folder (whole screen & selected area)
+bindsym Print exec maim ~/Pictures/$(date +%s).png
+bindsym Ctrl+Print exec maim -s -u ~/Pictures/$(date +%s).png
+
+# take screenshot to clipboard buffer (whole screen & selected area)
+bindsym Shift+Print exec maim | xclip -selection clipboard -t image/png -i
+bindsym Ctrl+Shift+Print exec maim -s -u | xclip -selection clipboard -t image/png -i
 
 # volume (up, down)
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
