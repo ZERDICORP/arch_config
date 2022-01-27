@@ -79,11 +79,6 @@ autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 " hard mode (fuck arrows) "
 """""""""""""""""""""""""""
 
-cnoremap <Down> <Nop>
-cnoremap <Left> <Nop>
-cnoremap <Right> <Nop>
-cnoremap <Up> <Nop>
-
 inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
