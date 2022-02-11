@@ -4,19 +4,17 @@
 
 filetype plugin indent on 
 
-syntax enable
+syntax on
 
 set nocompatible
-set number
+set number relativenumber
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set relativenumber
 set encoding=UTF-8
 set guioptions=
 set showtabline=0
 set wrap linebreak nolist
-set cursorline
 set timeoutlen=0
 
 
@@ -25,33 +23,20 @@ set timeoutlen=0
 " plugins "
 """""""""""
 
-call plug#begin('~/.vim/bundle')
+call plug#begin()
 
-  Plug 'ErichDonGubler/vim-sublime-monokai'
-  Plug 'vim-airline/vim-airline'
-  Plug 'ryanoasis/vim-devicons'
+  Plug 'ervandew/supertab'
 
 call plug#end()
 
 
 
-""""""""""""""""
-" color scheme "
-""""""""""""""""
+""""""""""""""
+" appearance "
+""""""""""""""
 
-colorscheme sublimemonokai
-
-
-
-""""""""""""""""""""
-" airline settings "
-""""""""""""""""""""
-
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#keymap#enabled = 0
-let g:airline_section_z = "\ue0a1:%l/%L Col:%c" 
-let g:Powerline_symbols='unicode' 
-let g:airline#extensions#xkblayout#enabled = 0
+hi Visual cterm=none ctermbg=darkgrey ctermfg=cyan
+hi MatchParen cterm=none ctermbg=yellow ctermfg=black
 
 
 
@@ -75,6 +60,13 @@ autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 
 
 
+"""""""""""""""
+" keybindings "
+"""""""""""""""
+nnoremap <F2> :set number! relativenumber!<CR>
+
+
+
 """""""""""""""""""""""""""
 " hard mode (fuck arrows) "
 """""""""""""""""""""""""""
@@ -83,13 +75,25 @@ inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
 inoremap <Up> <Nop>
+inoremap <C-Down> <Nop>
+inoremap <C-Left> <Nop>
+inoremap <C-Right> <Nop>
+inoremap <C-Up> <Nop>
 
 nnoremap <Down> <Nop>
 nnoremap <Left> <Nop>
 nnoremap <Right> <Nop>
 nnoremap <Up> <Nop>
+nnoremap <C-Down> <Nop>
+nnoremap <C-Left> <Nop>
+nnoremap <C-Right> <Nop>
+nnoremap <C-Up> <Nop>
 
 vnoremap <Down> <Nop>
 vnoremap <Left> <Nop>
 vnoremap <Right> <Nop>
 vnoremap <Up> <Nop>
+vnoremap <C-Down> <Nop>
+vnoremap <C-Left> <Nop>
+vnoremap <C-Right> <Nop>
+vnoremap <C-Up> <Nop>

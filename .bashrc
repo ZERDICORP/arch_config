@@ -2,6 +2,7 @@
 [[ $- != *i* ]] && return
 
 export PATH=$PATH:~/Binary
+export ZER_JAVA_LIB=~/Coding/java/
 export home_server1='zerdicorp@188.187.188.37'
 export server1='zerdicorp@80.249.146.66'
 
