@@ -15,7 +15,14 @@ order += "cpu_usage"
 order += "disk /"
 order += "tztime local"
 order += "battery all"
+order += "volume speaker"
 order += "wireless _first_"
+
+volume speaker {
+   format = " %volume"
+   format_muted = ""
+   mixer = "Speaker"
+}
 
 battery all {
         format = " %percentage "
@@ -34,6 +41,6 @@ cpu_usage {
 }
 
 wireless _first_ {
-  format_up = " %quality %frequency"
+  format_up = " %quality %frequency ~ %essid "
   format_down = "睊"
 }

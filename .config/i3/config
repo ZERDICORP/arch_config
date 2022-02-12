@@ -61,6 +61,10 @@ exec_always --no-startup-id "setxkbmap -model pc104 -layout us,ru -variant ,, -o
 # key bindings #
 ################
 
+# brightness (up, down)
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+
 # take screenshot to ~/Pictures folder (whole screen & selected area)
 bindsym Print exec maim ~/Pictures/$(date +%s).png
 bindsym Ctrl+Print exec maim -s -u ~/Pictures/$(date +%s).png
