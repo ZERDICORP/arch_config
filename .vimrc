@@ -10,7 +10,7 @@ set nocompatible
 set number relativenumber
 set tabstop=2
 set shiftwidth=2
-set expandtab
+set noexpandtab
 set encoding=UTF-8
 set guioptions=
 set showtabline=0
@@ -64,7 +64,7 @@ autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 " keybindings "
 """""""""""""""
 nnoremap <F2> :set number! relativenumber!<CR>
-
+nnoremap <F3> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
 
 
 """""""""""""""""""""""""""
