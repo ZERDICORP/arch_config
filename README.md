@@ -10,7 +10,6 @@
   - new > <all> > type > Linux filesystem
   - write
   - quit
-- fdisk -l
 - mkfs.vfat /dev/<EFI partion>
 - mkfs.btrfs -f /dev/<Linux filesystem partion>
 - mount /dev/<Linux filesystem partion> /mnt
@@ -50,7 +49,7 @@ harch
 - grub-mkconfig -o /boot/grub/grub.cfg
 - exit
 - umount -R /mnt
-- reboot
+- reboot (remove USB)
 - vim /etc/sudoers (uncomment `%wheel ALL=(ALL:ALL) ALL`)
 - useradd -m -G wheel -s /bin/bash zerdicorp
 - passwrd zerdicorp
