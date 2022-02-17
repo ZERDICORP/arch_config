@@ -59,7 +59,9 @@ harch
 - reboot
 - sudo nmcli device wifi connect <SSID> password <password>
 - sudo vim /etc/pacman.conf (uncomment `[multilib]` and next line)
-- sudo pacman -Syu lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader xorg-server xorg-xinit i3wm i3status dmenu git rxvt-unicode
+- sudo pacman -Syu git
+***
+- sudo pacman -S lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader xorg-server xorg-xinit i3wm i3status dmenu rxvt-unicode
 - install paru:
   - git clone https://aur.archlinux.org/paru.git
   - cd paru
