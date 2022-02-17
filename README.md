@@ -15,7 +15,7 @@
 - mount /dev/<Linux filesystem partion> /mnt
 - mkdir /mnt/boot && mkdir /mnt/boot/EFI
 - mount /dev/<EFI partion> /mnt/boot/EFI
-- pacstrap -i /mnt base base-devel linux-zen linux-zen-headers linux-firmware dosfstools btrfs-progs amd-ucode vim > (ENTER, ENTER, Y)
+- pacstrap -i /mnt base base-devel linux-zen linux-zen-headers linux-firmware dosfstools btrfs-progs amd-ucode vim > [ENTER, ENTER, Y]
 - genfstab -U /mnt >> /mnt/etc/fstab
 - cat /mnt/etc/fstab
 - arch-chroot /mnt
@@ -59,4 +59,17 @@ harch
 - reboot
 - sudo nmcli device wifi connect <SSID> password <password>
 - sudo vim /etc/pacman.conf (uncomment `[multilib]` and next line)
-- sudo pacman -Syu git
+- sudo pacman -Syu lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader xorg-server xorg-xinit i3wm i3status dmenu git rxvt-unicode
+- install paru:
+  - git clone https://aur.archlinux.org/paru.git
+  - cd paru
+  - makepkg -si
+  - cd .. && rm -rf paru
+- paru -S nerd-fonts-hack > (ENTER)
+- vim .xinit
+```
+exec i3
+```
+- startx
+- [alt + enter]
+- paru -S google-chrome > [ENTER, Y, q, Y] > enter password > [Y]
