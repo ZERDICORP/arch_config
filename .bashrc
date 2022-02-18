@@ -13,10 +13,7 @@ export PATH=$PATH:$USR_BIN
 export home_server1="zerdicorp@188.187.188.37"
 export server1="zerdicorp@80.249.146.66"
 
-mkdir -p $USR_BIN
-mkdir -p $USR_CODING
-mkdir -p $USR_DOWNLOADS
-mkdir -p $USR_PICS
+mkdir -p $USR_BIN $USR_CODING $USR_DOWNLOADS $USR_PICS
 
 if test -f "$USR_BIN/als"; then
    alias ls="als" 
