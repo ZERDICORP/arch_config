@@ -3,3 +3,5 @@
 [user]
 	email = nikolaianikin2002@gmail.com
 	name = ZERDICORP
+[credential]
+	helper = cache
