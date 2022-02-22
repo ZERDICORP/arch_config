@@ -16,6 +16,15 @@ set guioptions=
 set showtabline=0
 set wrap linebreak nolist
 set timeoutlen=0
+set smartindent
+
+
+
+"""""""""""""""""""""""
+" disable python tabs "
+"""""""""""""""""""""""
+
+let g:python_recommended_style = 0
 
 
 
