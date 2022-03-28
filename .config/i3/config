@@ -99,6 +99,9 @@ bindsym $mod+e layout default
 # tabbed windows layout
 bindsym $mod+w layout tabbed
 
+# floating window mode
+bindsym $mod+Shift+f floating toggle
+
 # kill focused window
 bindsym $mod+x kill
 
