@@ -19,4 +19,9 @@ if test -f "$USR_BIN/als"; then
    alias ls="als" 
 fi
 
+alias vpn='f(){ sudo openvpn --config ~/.vpn/remote/"$1" --auth-user-pass ~/.vpn/login.conf; unset -f f; }; f'
 alias vi="vim"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
