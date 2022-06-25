@@ -1,0 +1,4 @@
+wget "https://account.protonvpn.com/api/vpn/config?Category=Server&Tier=0&Platform=Linux&Protocol=tcp" -O .zip
+unzip .zip
+rm .zip
+rm -- "$0"
