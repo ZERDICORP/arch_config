@@ -1,1 +1,2 @@
 com.jetbrains.darkPurpleTheme
+com.markskelton.one-dark-theme
