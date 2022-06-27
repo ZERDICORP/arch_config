@@ -16,7 +16,8 @@ export server1="zerdicorp@80.249.146.66"
 mkdir -p $USR_BIN $USR_CODING $USR_DOWNLOADS $USR_PICS
 
 if test -f "$USR_BIN/als"; then
-   alias ls="als" 
+	alias ols="/usr/bin/ls"
+	alias ls="als"
 fi
 
 alias vpn='f(){ sudo openvpn --config ~/.vpn/remote/"$1" --auth-user-pass ~/.vpn/login.conf; unset -f f; }; f'
